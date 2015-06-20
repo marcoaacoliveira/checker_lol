@@ -1,0 +1,9 @@
+== Checker
+Esse projeto visa facilitar o desenvolvimento de app com a API do League of Legends. Trabalhando numa classe as principais funçoes utilizadas, facilitando ao desenvolvedor o uso da mesma.
+
+
+==Metodos
+
+===total_ranked(usuario)
+Pode ser passado tanto o id ou o nome do usuario como parametro, a funcao devolve as estatisticas gerais para aquele jogador em forma de um Hash
+
