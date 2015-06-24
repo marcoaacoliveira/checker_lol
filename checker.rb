@@ -31,8 +31,7 @@ class Checker
 	end
 
   def ranked_status_by_hero(summoner, champion)
-  	total = get_ranked(summoner)['champions']
-    total['stats']
+  	#TODO
   end
 
   private
