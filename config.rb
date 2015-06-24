@@ -1,1 +1,1 @@
-API_KEY = 'Sua key' #Para evitar reescrever sua Key, substitua-a aqui
+API_KEY = 'e5fa8938-e73e-4d45-9398-0e7d56f202b4' #Para evitar reescrever sua Key, substitua-a aqui
