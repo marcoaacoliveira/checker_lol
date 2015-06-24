@@ -1,7 +1,9 @@
+require 'config'
 require 'rest-client'
+
 class Checker
   attr_reader :api_key
-  def initialize(api_key)
+  def initialize(api_key=API_KEY)
     @api_key = api_key
   end
 

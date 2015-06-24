@@ -1,0 +1,1 @@
+API_KEY = 'Sua key' #Para evitar reescrever sua Key, substitua-a aqui
