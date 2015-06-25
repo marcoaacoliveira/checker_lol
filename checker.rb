@@ -31,7 +31,11 @@ class Checker
 	end
 
   def ranked_status_by_hero(summoner, champion)
-  	#TODO
+  	total = get_ranked(summoner)["champions"]
+  	arr = total.select do |x|
+  		x["id"] == champion.to_i
+  	end
+  	arr[0]["stats"]
   end
 
   private
