@@ -19,7 +19,7 @@ class Checker
     JSON.parse(ranked)
   end
 
-  def get_hero_by_id(id)
+  def get_champion_by_id(id)
   	champions = RestClient.get "https://global.api.pvp.net/api/lol/static-data/br/v1.2/champion?champData=all&api_key=#{@api_key}"
   	champions = JSON.parse(champions)
   	champions["keys"][id.to_s]
@@ -30,7 +30,7 @@ class Checker
     total['stats']
 	end
 
-  def ranked_status_by_hero(summoner, champion)
+  def ranked_status_by_champion(summoner, champion)
   	total = get_ranked(summoner)["champions"]
   	arr = total.select do |x|
   		x["id"] == champion.to_i
