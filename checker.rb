@@ -8,19 +8,31 @@ class Checker
   end
 
   def get_id(name)
-    summoner = RestClient.get "https://br.api.pvp.net/api/lol/br/v1.4/summoner/by-name/#{name}?api_key=#{@api_key}"
+    begin
+    	summoner = RestClient.get "https://br.api.pvp.net/api/lol/br/v1.4/summoner/by-name/#{name}?api_key=#{@api_key}"
+    rescue => e
+    	return e.http_code
+    end
     summoner = JSON.parse(summoner)
     summoner[name.downcase]['id']
   end
 
   def get_ranked(summoner)
   	id = to_id(summoner)
-    ranked = RestClient.get "https://br.api.pvp.net/api/lol/br/v1.3/stats/by-summoner/#{id}/ranked?season=SEASON2015&api_key=#{@api_key}"
+    begin
+    	ranked = RestClient.get "https://br.api.pvp.net/api/lol/br/v1.3/stats/by-summoner/#{id}/ranked?season=SEASON2015&api_key=#{@api_key}"
+    rescue => e
+    	return e.http_code
+    end
     JSON.parse(ranked)
   end
 
   def get_champion_by_id(id)
-  	champions = RestClient.get "https://global.api.pvp.net/api/lol/static-data/br/v1.2/champion?champData=all&api_key=#{@api_key}"
+  	begin
+	  	champions = RestClient.get "https://global.api.pvp.net/api/lol/static-data/br/v1.2/champion?champData=all&api_key=#{@api_key}"
+  	rescue => e
+  		return e.http_code
+  	end
   	champions = JSON.parse(champions)
   	champions["keys"][id.to_s]
   end
