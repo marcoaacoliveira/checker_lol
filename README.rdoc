@@ -7,3 +7,5 @@ Esse projeto visa facilitar o desenvolvimento de app com a API do League of Lege
 ===total_ranked(usuario)
 Pode ser passado tanto o id ou o nome do usuario como parametro, a funcao devolve as estatisticas gerais para aquele jogador em forma de um Hash
 
+===ranked_status_by_champion(summoner,champion)
+Pega como entrada o summoner id ou nickname e o id do champion(TODO: possibilidade de colocar apenas o nome) e retorna as informações rankeds para aquele summoner usando o champion
