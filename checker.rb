@@ -38,8 +38,13 @@ class Checker
   end
 	
 	def total_ranked(summoner)
-    total = get_ranked(summoner)['champions'].last
-    total['stats']
+    response = get_ranked(summoner)
+    if(response.class == Hash)
+	    total = response['champions'].last
+	    total['stats']
+		else
+			"Summoner não encontrado"
+		end
 	end
 
   def ranked_status_by_champion(summoner, champion)
