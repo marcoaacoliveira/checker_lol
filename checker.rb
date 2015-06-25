@@ -48,11 +48,20 @@ class Checker
 	end
 
   def ranked_status_by_champion(summoner, champion)
-  	total = get_ranked(summoner)["champions"]
-  	arr = total.select do |x|
-  		x["id"] == champion.to_i
-  	end
-  	arr[0]["stats"]
+  	response = get_ranked(summoner)
+  	if(response.class == Hash)
+		  total = response["champions"]
+	  	arr = total.select do |x|
+	  		x["id"] == champion.to_i
+	  	end
+	  	if(arr!=[])
+		  	return arr[0]["stats"]
+			else
+				return "Champion não encontrado"
+			end
+	  else
+	  	"Summoner não encontrado"
+	  end
   end
 
   private
