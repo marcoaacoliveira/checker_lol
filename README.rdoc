@@ -1,15 +1,18 @@
 == Checker
-Esse projeto visa facilitar o desenvolvimento de app com a API do League of Legends. Trabalhando numa classe as principais funçoes utilizadas, facilitando ao desenvolvedor o uso da mesma.
+Esse projeto visa facilitar o desenvolvimento de app com a API do League of Legends. Trabalhando numa classe as principais funções utilizadas, facilitando ao desenvolvedor o uso da mesma.
 
 
 ==Metodos
 
 ===total_ranked(usuario)
-Pode ser passado tanto o id ou o nome do usuario como parametro, a funcao devolve as estatisticas gerais para aquele jogador em forma de um Hash
+Pode ser passado tanto o id ou o nome do usuário como parametro, a função devolve as estatísticas gerais para aquele jogador em forma de um Hash
 
 ===ranked_status_by_champion(summoner,champion)
 Pega como entrada o summoner id ou nickname e o id do champion(TODO: possibilidade de colocar apenas o nome) e retorna as informações rankeds para aquele summoner usando o champion
 
+
+==Como as coisas estão por aqui
+[![Code Climate](https://codeclimate.com/github/marcoantoniooliveira/checker_lol/badges/gpa.svg)](https://codeclimate.com/github/marcoantoniooliveira/checker_lol)
 
 
 == Licença MIT
