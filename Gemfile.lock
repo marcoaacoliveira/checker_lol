@@ -1,11 +1,15 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    codeclimate-test-reporter (0.4.7)
+      simplecov (>= 0.7.1, < 1.0.0)
     diff-lcs (1.2.5)
+    docile (1.1.5)
     domain_name (0.5.24)
       unf (>= 0.0.5, < 1.0.0)
     http-cookie (1.0.2)
       domain_name (~> 0.5)
+    json (1.8.3)
     mime-types (2.6.1)
     netrc (0.10.3)
     rest-client (1.8.0)
@@ -25,6 +29,11 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.3.0)
     rspec-support (3.3.0)
+    simplecov (0.10.0)
+      docile (~> 1.1.0)
+      json (~> 1.8)
+      simplecov-html (~> 0.10.0)
+    simplecov-html (0.10.0)
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.1)
@@ -33,5 +42,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  codeclimate-test-reporter
   rest-client
   rspec
