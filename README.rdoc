@@ -12,8 +12,8 @@ Pega como entrada o summoner id ou nickname e o id do champion(TODO: possibilida
 
 
 ==Como as coisas estão por aqui
-[![Code Climate](https://codeclimate.com/github/marcoantoniooliveira/checker_lol/badges/gpa.svg)](https://codeclimate.com/github/marcoantoniooliveira/checker_lol)
 
+{<img src="https://codeclimate.com/github/marcoantoniooliveira/checker_lol/badges/gpa.svg" />}[https://codeclimate.com/github/marcoantoniooliveira/checker_lol]
 
 == Licença MIT
 
